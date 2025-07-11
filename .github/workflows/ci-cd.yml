@@ -5,12 +5,13 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  # Allow manual trigger
   workflow_dispatch:
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     
     steps:
     - uses: actions/checkout@v4
@@ -37,7 +38,8 @@ jobs:
   deploy:
     needs: build-and-test
     runs-on: ubuntu-latest
-    # Only deploy on push to main, not on PRs
+    permissions:
+      contents: write  # Explicitly set write permissions for deployment
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     
     steps:
@@ -51,3 +53,4 @@ jobs:
       with:
         folder: .
         branch: gh-pages
+        token: ${{ github.token }}  # Explicitly use the GitHub token
