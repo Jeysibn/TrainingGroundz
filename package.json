@@ -1,0 +1,19 @@
+{
+  "name": "ci-cd-training",
+  "version": "1.0.0",
+  "description": "CI/CD training project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeysibn/TrainingGroundz.git"
+  },
+  "keywords": [
+    "ci-cd",
+    "github-actions"
+  ],
+  "author": "Jeysibn",
+  "license": "MIT"
+}

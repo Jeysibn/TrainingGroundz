@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Learning Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My CI/CD Learning Journey</h1>
+        </header>
+        <main>
+            <section class="intro">
+                <h2>Welcome to my CI/CD practice project</h2>
+                <p>This page is automatically deployed using GitHub Actions.</p>
+                <p>Last deployment: <span id="deployment-date"></span></p>
+            </section>
+            <section class="info">
+                <h2>What I've Learned</h2>
+                <ul>
+                    <li>Setting up GitHub Actions workflows</li>
+                    <li>Creating CI pipelines to test code</li>
+                    <li>Implementing CD to automatically deploy changes</li>
+                    <li>Managing environment variables and secrets</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Created by Jeysibn - Learning CI/CD since 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('deployment-date').textContent = new Date().toISOString();
+    </script>
+</body>
+</html>
